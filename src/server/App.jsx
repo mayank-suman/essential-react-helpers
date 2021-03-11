@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import useHover from '../hooks/useHover';
-import useDebounce from '../hooks/useDebounce';
+import useTimeout from '../hooks/useTimeout';
 
 const RenderHoverComp = () => {
   const [hoverRef, isHovered] = useHover();
@@ -12,13 +12,13 @@ const RenderHoverComp = () => {
   );
 };
 
-const renderDebounceInput = () => {
+const renderTimeoutInput = () => {
   const [value, setValue] = useState('');
   const handleChange = ({ target: { value } }) => {
     setValue(value);
   };
 
-  const [debouncedValue] = useDebounce(value);
+  const [timeoutValue] = useTimeout(value, { delay: 1000 });
 
   return (
     <div>
@@ -27,7 +27,7 @@ const renderDebounceInput = () => {
         style={{ border: '1px solid #ccc' }}
         onChange={handleChange}
       ></input>
-      Value: {debouncedValue}
+      Value: {timeoutValue}
     </div>
   );
 };
@@ -36,7 +36,8 @@ export default function App() {
   return (
     <div>
       {RenderHoverComp()}
-      {renderDebounceInput()}
+      <br></br>
+      {renderTimeoutInput()}
     </div>
   );
 }
