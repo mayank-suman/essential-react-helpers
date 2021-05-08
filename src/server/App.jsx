@@ -17,7 +17,6 @@ const renderComponents = {
       </div>
     );
   },
-
   RenderTimeoutInput: () => {
     const [value, setValue] = useState('');
     const handleChange = ({ target: { value } }) => {
@@ -37,7 +36,6 @@ const renderComponents = {
       </div>
     );
   },
-
   RenderDebounce: () => {
     const [inputRef, debouncedValue] = useDebounce({ delay: 1000 });
 
@@ -53,7 +51,6 @@ const renderComponents = {
       </div>
     );
   },
-
   RenderDebounceFn: () => {
     const [value, setValue] = useState('');
     const [inputRef, debouncedValue] = useDebounceFn({ delay: 1000 });
@@ -97,17 +94,20 @@ const renderComponents = {
   },
 };
 
+const compNamesArr = Object.keys(renderComponents);
+
 export default function App() {
   return (
     <div>
-      {Object.keys(renderComponents).map((ComponentName, index) => {
+      {compNamesArr.map((ComponentName, index) => {
         const Component = renderComponents[ComponentName];
+        const isLast = compNamesArr.length === index + 1;
 
         return (
           <section key={ComponentName}>
-            <Component key={index} />
-            <br></br>
-            <hr></hr>
+            <Component key={ComponentName} />
+            {!isLast && <br></br>}
+            {!isLast && <hr></hr>}
           </section>
         );
       })}
