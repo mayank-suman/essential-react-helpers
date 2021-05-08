@@ -3,6 +3,7 @@ import useHover from '../hooks/useHover';
 import useTimeout from '../hooks/useTimeout';
 import useDebounce from '../hooks/useDebounce';
 import useDebounceFn from '../hooks/useDebounceFn';
+import usePromise from '../hooks/usePromise';
 
 const RenderHoverComp = () => {
   const [hoverRef, isHovered] = useHover();
@@ -73,16 +74,44 @@ const renderDebounceFn = () => {
   );
 };
 
+const renderPromiseEx = () => {
+  const waitForFiveSec = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('done');
+      // reject('failed');
+    }, 5000);
+  });
+
+  const { isLoading, isLoaded, result, error, load } = usePromise(
+    waitForFiveSec
+  );
+
+  console.log('🚀 ~ file: App.jsx ~ line 87 ~ renderPromiseEx ~ isLoading', {
+    isLoading,
+    isLoaded,
+    result,
+    error,
+  });
+
+  return <button onClick={() => load()}>Promise to come</button>;
+};
+
 export default function App() {
   return (
     <div>
       {RenderHoverComp()}
+      <hr></hr>
       <br></br>
       {renderTimeoutInput()}
+      <hr></hr>
       <br></br>
       {renderDebounce()}
-      {/* <br></br>
-      {renderDebounceFn()} */}
+      <hr></hr>
+      <br></br>
+      {renderDebounceFn()}
+      <hr></hr>
+      <br></br>
+      {renderPromiseEx()}
     </div>
   );
 }
