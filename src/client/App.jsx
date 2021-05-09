@@ -71,7 +71,7 @@ const renderComponents = {
       </div>
     );
   },
-  RenderPromiseEx: () => {
+  RenderPromiseEg: () => {
     const waitForFiveSec = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve('done');
@@ -90,7 +90,7 @@ const renderComponents = {
       error,
     });
 
-    return <button onClick={() => load()}>Promise to come</button>;
+    return <button onClick={() => load()}>Run Promise</button>;
   },
 };
 
