@@ -1,19 +1,12 @@
 {
   "name": "react-hooks-collection",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/mayank-suman/react-hooks-collection",
   "author": "Mayank Suman <mayank@simpplr.com>",
   "license": "MIT",
-  "browserslist": [
-    "last 3 and_chr versions",
-    "last 3 chrome versions",
-    "last 3 opera versions",
-    "last 3 ios_saf versions",
-    "last 3 safari versions"
-  ],
   "scripts": {
-    "dev": "parcel src/server/index.html"
+    "dev": "webpack serve --config webpack/webpack.dev.js",
+    "build": "webpack build --config webpack/webpack.prod.js"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
