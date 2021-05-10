@@ -1,1 +1,1 @@
-# Essential react Helpers
+# Essential React Helpers
