@@ -3,3 +3,12 @@ dist
 .parcel-cache
 yarn-error.log
 .cache
+
+# yarn v2 ignored files
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
