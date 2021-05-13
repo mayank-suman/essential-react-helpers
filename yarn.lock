@@ -3492,6 +3492,40 @@ __metadata:
   languageName: node
   linkType: hard
 
+"essential-react-helpers@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "essential-react-helpers@workspace:."
+  dependencies:
+    "@babel/core": ^7.14.0
+    "@babel/plugin-transform-runtime": ^7.13.15
+    "@babel/preset-env": ^7.14.1
+    "@babel/preset-react": ^7.13.13
+    "@pmmmwh/react-refresh-webpack-plugin": ^0.4.3
+    babel-loader: ^8.2.2
+    babel-plugin-module-resolver: ^4.1.0
+    css-loader: ^5.2.4
+    eslint: ^7.26.0
+    eslint-config-airbnb-base: ^14.2.1
+    eslint-config-prettier: ^8.3.0
+    eslint-plugin-import: ^2.22.1
+    eslint-plugin-prettier: ^3.4.0
+    eslint-plugin-react: ^7.23.2
+    html-webpack-plugin: ^5.3.1
+    prettier: ^2.2.1
+    prop-types: ^15.7.2
+    react: 17.0.2
+    react-dom: ^17.0.2
+    react-refresh: ^0.10.0
+    sass: ^1.32.12
+    sass-loader: ^11.0.1
+    style-loader: ^2.0.0
+    webpack: ^5.36.2
+    webpack-cli: ^4.7.0
+    webpack-dev-server: ^3.11.2
+    webpack-merge: ^5.7.3
+  languageName: unknown
+  linkType: soft
+
 "estraverse@npm:^4.1.1":
   version: 4.3.0
   resolution: "estraverse@npm:4.3.0"
@@ -6487,40 +6521,6 @@ fsevents@~2.3.1:
   checksum: 960a74ff6670766846a73097a599115963df1574833c59ca0c2fd909758ebe7a6214cd14f5e6aa63ce846d8f39fde7f3b80474ccfcfadc45dd7f3246364718c6
   languageName: node
   linkType: hard
-
-"react-hooks-collection@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "react-hooks-collection@workspace:."
-  dependencies:
-    "@babel/core": ^7.14.0
-    "@babel/plugin-transform-runtime": ^7.13.15
-    "@babel/preset-env": ^7.14.1
-    "@babel/preset-react": ^7.13.13
-    "@pmmmwh/react-refresh-webpack-plugin": ^0.4.3
-    babel-loader: ^8.2.2
-    babel-plugin-module-resolver: ^4.1.0
-    css-loader: ^5.2.4
-    eslint: ^7.26.0
-    eslint-config-airbnb-base: ^14.2.1
-    eslint-config-prettier: ^8.3.0
-    eslint-plugin-import: ^2.22.1
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-react: ^7.23.2
-    html-webpack-plugin: ^5.3.1
-    prettier: ^2.2.1
-    prop-types: ^15.7.2
-    react: 17.0.2
-    react-dom: ^17.0.2
-    react-refresh: ^0.10.0
-    sass: ^1.32.12
-    sass-loader: ^11.0.1
-    style-loader: ^2.0.0
-    webpack: ^5.36.2
-    webpack-cli: ^4.7.0
-    webpack-dev-server: ^3.11.2
-    webpack-merge: ^5.7.3
-  languageName: unknown
-  linkType: soft
 
 "react-is@npm:^16.8.1":
   version: 16.13.1
