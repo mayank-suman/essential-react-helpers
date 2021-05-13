@@ -4,3 +4,12 @@ import useDebounceFn from './useDebounceFn';
 import useHover from './useHover';
 import usePromise from './usePromise';
 import useTimeout from './useTimeout';
+
+export {
+  useClickOutside,
+  useDebounce,
+  useDebounceFn,
+  useHover,
+  usePromise,
+  useTimeout,
+};
