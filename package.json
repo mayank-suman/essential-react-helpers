@@ -5,7 +5,9 @@
   "author": "Mayank Suman <mayank@simpplr.com>",
   "license": "MIT",
   "scripts": {
-    "clean": "rf -rf dist",
+    "clean:build": "rm -rf dist",
+    "clean:packageCache": "yarn cache clean --all && rm -rf node_modules",
+    "clean:everything": "yarn clean:build && yarn clean:packageCache",
     "dev": "webpack serve --config webpack/webpack.dev.js",
     "build": "webpack build --config webpack/webpack.prod.js"
   },
