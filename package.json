@@ -1,7 +1,7 @@
 {
   "name": "essential-react-helpers",
   "version": "1.0.0",
-  "repository": "https://github.com/mayank-suman/react-hooks-collection",
+  "repository": "https://github.com/mayank-suman/essential-react-helpers",
   "author": "Mayank Suman <mayank@simpplr.com>",
   "license": "MIT",
   "scripts": {
