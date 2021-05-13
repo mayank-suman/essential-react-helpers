@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import useHover from '../hooks/useHover';
-import useTimeout from '../hooks/useTimeout';
-import useDebounce from '../hooks/useDebounce';
-import useDebounceFn from '../hooks/useDebounceFn';
-import usePromise from '../hooks/usePromise';
+import useHover from '../src/hooks/useHover';
+import useTimeout from '../src/hooks/useTimeout';
+import useDebounce from '../src/hooks/useDebounce';
+import useDebounceFn from '../src/hooks/useDebounceFn';
+import usePromise from '../src/hooks/usePromise';
 
 const renderComponents = {
   RenderHoverComp: () => {
