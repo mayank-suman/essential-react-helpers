@@ -5,6 +5,7 @@
   "author": "Mayank Suman <mayank@simpplr.com>",
   "license": "MIT",
   "scripts": {
+    "clean": "rf -rf dist",
     "dev": "webpack serve --config webpack/webpack.dev.js",
     "build": "webpack build --config webpack/webpack.prod.js"
   },
