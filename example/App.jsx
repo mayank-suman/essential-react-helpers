@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import useHover from '../src/hooks/useHover';
-import useTimeout from '../src/hooks/useTimeout';
-import useDebounce from '../src/hooks/useDebounce';
-import useDebounceFn from '../src/hooks/useDebounceFn';
-import usePromise from '../src/hooks/usePromise';
+
+import {
+  useHover,
+  useTimeout,
+  useDebounce,
+  useDebounceFn,
+  usePromise,
+} from '../dist/essential-react-helpers.esm.js';
 
 const renderComponents = {
   RenderHoverComp: () => {
@@ -79,9 +82,8 @@ const renderComponents = {
       }, 5000);
     });
 
-    const { isLoading, isLoaded, result, error, load } = usePromise(
-      waitForFiveSec
-    );
+    const { isLoading, isLoaded, result, error, load } =
+      usePromise(waitForFiveSec);
 
     console.log('🚀 ~ file: App.jsx ~ line 87 ~ renderPromiseEx ~ isLoading', {
       isLoading,
