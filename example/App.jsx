@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
-import {
+
+import useHover from '../src/hooks/useHover';
+import useTimeout from '../src/hooks/useTimeout';
+import useDebounce from '../src/hooks/useDebounce';
+import useDebounceFn from '../src/hooks/useDebounceFn';
+import usePromise from '../src/hooks/usePromise';
+
+/* import {
   useHover,
   useTimeout,
   useDebounce,
   useDebounceFn,
   usePromise,
-} from '../dist/essential-react-helpers.esm.js';
+} from '../dist/essential-react-helpers.esm.js'; */
 
 const renderComponents = {
   RenderHoverComp: () => {
