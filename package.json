@@ -1,12 +1,28 @@
 {
   "name": "essential-react-helpers",
-  "version": "1.0.0",
-  "repository": "https://github.com/mayank-suman/react-hooks-collection",
-  "author": "Mayank Suman <mayank@simpplr.com>",
+  "version": "1.0.6",
+  "description": "Essential react helpers library which includes component and hooks used in daily react life.",
+  "author": "Mayank Suman <mayankcsmn@gmail.com>",
   "license": "MIT",
+  "main": "dist/essential-react-helpers.cjs.js",
+  "module": "dist/essential-react-helpers.esm.js",
+  "browser": "dist/essential-react-helpers.umd.js",
+  "source": "src/index.js",
   "scripts": {
-    "dev": "webpack serve --config webpack/webpack.dev.js",
-    "build": "webpack build --config webpack/webpack.prod.js"
+    "clean:build": "rm -rf dist",
+    "clean:packageCache": "yarn cache clean --all && rm -rf node_modules",
+    "clean:everything": "yarn clean:build && yarn clean:packageCache",
+    "demo:dev": "yarn lib:build && webpack serve --config webpack/webpack.dev.js",
+    "demo:build": "yarn lib:build && webpack build --config webpack/webpack.prod.js",
+    "lib:build": "rollup --config"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
@@ -14,6 +30,9 @@
     "@babel/preset-env": "^7.14.1",
     "@babel/preset-react": "^7.13.13",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
     "babel-loader": "^8.2.2",
     "babel-plugin-module-resolver": "^4.1.0",
     "css-loader": "^5.2.4",
@@ -25,7 +44,12 @@
     "eslint-plugin-react": "^7.23.2",
     "html-webpack-plugin": "^5.3.1",
     "prettier": "^2.2.1",
+    "prop-types": "^15.7.2",
+    "react": "17.0.2",
+    "react-dom": "^17.0.2",
     "react-refresh": "^0.10.0",
+    "rollup": "^2.48.0",
+    "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.32.12",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
@@ -34,9 +58,20 @@
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
   },
-  "dependencies": {
-    "prop-types": "^15.7.2",
-    "react": "17.0.2",
-    "react-dom": "^17.0.2"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayank-suman/essential-react-helpers.git"
+  },
+  "keywords": [
+    "react",
+    "helpers",
+    "components",
+    "use",
+    "hooks"
+  ],
+  "bugs": {
+    "url": "https://github.com/mayank-suman/essential-react-helpers/issues"
+  },
+  "homepage": "https://github.com/mayank-suman/essential-react-helpers#readme",
+  "sideEffects": false
 }

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import useHover from '../hooks/useHover';
-import useTimeout from '../hooks/useTimeout';
-import useDebounce from '../hooks/useDebounce';
-import useDebounceFn from '../hooks/useDebounceFn';
-import usePromise from '../hooks/usePromise';
+import {
+  useHover,
+  useTimeout,
+  useDebounce,
+  useDebounceFn,
+  usePromise,
+} from '../src/index.js';
 
 const renderComponents = {
   RenderHoverComp: () => {
@@ -79,9 +81,8 @@ const renderComponents = {
       }, 5000);
     });
 
-    const { isLoading, isLoaded, result, error, load } = usePromise(
-      waitForFiveSec
-    );
+    const { isLoading, isLoaded, result, error, load } =
+      usePromise(waitForFiveSec);
 
     console.log('🚀 ~ file: App.jsx ~ line 87 ~ renderPromiseEx ~ isLoading', {
       isLoading,

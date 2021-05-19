@@ -6,7 +6,7 @@ const assetsFolderName = 'assets';
 
 // TODO: update dummy text with real one
 module.exports = {
-  entry: '/src/client/index.js',
+  entry: '/example/index.js',
   output: {
     filename: '[name].[contenthash].js',
     assetModuleFilename: `${assetsFolderName}/[hash][ext][query]`,
@@ -40,7 +40,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: '/src/client/index.html',
+      template: '/example/index.html',
     }),
   ],
 };
