@@ -1,6 +1,6 @@
 {
   "name": "essential-react-helpers",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "Essential react helpers library which includes component and hooks used in daily react life.",
   "author": "Mayank Suman <mayankcsmn@gmail.com>",
   "license": "MIT",
